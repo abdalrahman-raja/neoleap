@@ -6,126 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEO LEAP</title>
     <style>
-    /* تنسيق الجسم */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+        /* تنسيق الجسم */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-/* تنسيق الرأس */
-header {
-    padding: 15px 30px;
-    background-color: #68c998; /* لون رأس الصفحة */
-    color: #ffffff;
-    text-align: center;
-}
+        /* تنسيق الرأس */
+        header {
+            padding: 15px 30px;
+            background-color: #68c998; /* لون رأس الصفحة */
+            color: #ffffff;
+            text-align: center;
+        }
 
-header .logo {
-    display: inline-block;
-    background-color: #ffffff; /* خلفية بيضاء للشعار */
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        header .logo {
+            display: inline-block;
+            background-color: #ffffff; /* خلفية بيضاء للشعار */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-header .logo img {
-    max-width: 100px;
-}
+        header .logo img {
+            max-width: 100px;
+        }
 
-/* تنسيق محتوى الدفع */
-.payment-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 30px auto;
-}
+        /* تنسيق محتوى الدفع */
+        .payment-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 30px auto;
+        }
 
-.payment-container h1 {
-    text-align: center;
-    margin-bottom: 5px; /* تقليل المسافة السفلية */
-    color: #333;
-}
+        .payment-container h1 {
+            text-align: center;
+            margin-bottom: 5px; /* تقليل المسافة السفلية */
+            color: #333;
+        }
 
-/* تنسيق رقم الطلب */
-.order-number {
-    text-align: right; /* وضع النص في الجهة اليمنى */
-    font-size: 14px; /* حجم أصغر للنص */
-    color: #555;
-    margin-bottom: 20px; /* مسافة بين النص وبقية المحتوى */
-}
+        /* تنسيق رقم الطلب */
+        .order-number {
+            text-align: right; /* وضع النص في الجهة اليمنى */
+            font-size: 14px; /* حجم أصغر للنص */
+            color: #555;
+            margin-bottom: 20px; /* مسافة بين النص وبقية المحتوى */
+        }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
 
-/* تنسيق Flexbox للحقلين */
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px; /* إضافة مساحة 20 بيكسل بين الحقلين */
-}
+        /* تنسيق Flexbox للحقلين */
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* إضافة مساحة 20 بيكسل بين الحقلين */
+        }
 
-.flex-item {
-    flex: 1;
-}
+        .flex-item {
+            flex: 1;
+        }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #68c998; /* لون زر الإرسال */
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #68c998; /* لون زر الإرسال */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-button:hover {
-    background-color: #57af80; /* تغيير اللون عند التمرير إلى درجة أغمق */
-}
+        button:hover {
+            background-color: #57af80; /* تغيير اللون عند التمرير إلى درجة أغمق */
+        }
 
-/* تنسيق أيقونات البطاقات الائتمانية */
-.cards-icons {
-    text-align: center;
-    margin-top: 159px;
-}
+        /* تنسيق أيقونات البطاقات الائتمانية */
+        .cards-icons {
+            text-align: center;
+            margin-top: 20px; /* تعديل المسافة العلوية */
+        }
 
-.cards-icons img {
-    width: 300px;
-    margin: 0 10px;
-}
+        .cards-icons img {
+            width: 300px;
+            margin: 0 10px;
+        }
 
-/* تنسيق التذييل */
-footer {
-    padding: 15px 30px;
-    background-color: #333;
-    color: #ffffff;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-/* تنسيق نص نوع البطاقة */
-.card-type {
-  font-size: 14px;
-  color: #555;
-  margin-top: 10px;
-  text-align: right;
-}
-</style>
+        /* تنسيق التذييل */
+        footer {
+            padding: 15px 30px;
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* تنسيق نص نوع البطاقة */
+        .card-type {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            text-align: right;
+        }
+    </style>
 </head>
 
 <body>
@@ -137,22 +138,19 @@ footer {
 
     <div class="payment-container">
         <h1>NEO LEAP</h1>
-        <p class="order-number">Order N:70490</p> <!-- إضافة النص هنا -->
+        <p class="order-number">Order N:70490</p>
 
         <form id="payment-form">
             <label for="cardholder-name">اسم حامل البطاقة:</label>
             <input type="text" id="cardholder-name" name="cardholder-name" required>
 
+            <label for="card-number">رقم البطاقة الائتمانية:</label>
+            <input type="text" id="card-number" name="card-number" required>
             
-    <label for="card-number">رقم البطاقة الائتمانية:</label>
-    <input type="text" id="card-number" name="card-number" required>
-    
-    <!-- عرض نوع البطاقة -->
-    <p id="card-type" class="card-type">نوع البطاقة</p>
+            <!-- عرض نوع البطاقة -->
+            <p id="card-type" class="card-type">نوع البطاقة</p>
 
-    <!-- الحقول الأخرى -->
-
-
+            <!-- الحقول الأخرى -->
             <div class="flex-container">
                 <div class="flex-item">
                     <label for="expiry-date">تاريخ انتهاء الصلاحية:</label>
@@ -166,7 +164,13 @@ footer {
 
             <button type="submit">تأكيد</button>
         </form>
-        <div> <script>
+
+        <div class="cards-icons">
+            <img src="mada-visa-mastar-apple-pay-886x159.png" alt="mada-visa-mastar-apple-pay">
+        </div>
+    </div>
+
+    <script>
         document.getElementById('payment-form').addEventListener('submit', function (event) {
             event.preventDefault(); // منع إرسال النموذج بالطريقة الافتراضية
 
@@ -210,21 +214,6 @@ footer {
             });
         });
     </script>
-</div>
-
-        <div class="cards-icons">
-            <img src="mada-visa-mastar-apple-pay-886x159.png" alt="mada-visa-mastar-apple-pay">
-           
-    </div>
-
-    <script src="script.js"></script>
 </body>
 
-</html>
-
-
-
-
-
-   
-
+                        </html>
